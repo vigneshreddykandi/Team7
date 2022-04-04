@@ -23,7 +23,7 @@ body  {
 </header>
 	<body>
 	
-	<div class="container"> <br> <br> <br> <br>
+	<div class="container"> <br> <br> <br> <br> <br>
   <div class="row">
     <div class="col">
      <div class="card" style="width: 28rem;">
@@ -52,6 +52,7 @@ body  {
   </body>
   
   <footer>
+  
   	<%@ include file="/html/footer.html" %>
   
   
