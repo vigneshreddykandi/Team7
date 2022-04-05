@@ -53,6 +53,7 @@
 height: 300px;
 }
 
+<<<<<<< Updated upstream
 #login-form{
 	
 	text-align:center;
@@ -60,30 +61,7 @@ height: 300px;
     margin-bottom:80px;
     width:auto;    
 }
+=======
 
-.bg-light text-center text-lg-start {
- position: absolute;
- position: fixed;
- bottom: 0;
- width: 100%;
- }
 
-/*admin dashboard*/
-.btn-dashboard {
-  width: 560px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.btn-dashboard .btn {
-  background: var(--primary-color);
-  min-width: 250px;
-  font-size: 18px;
-  font-weight: normal;
-}
-
-.btn-dashboard .btn:hover {
-  background: var(--light-hover);
-}
+>>>>>>> Stashed changes
