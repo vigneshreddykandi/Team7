@@ -2,13 +2,15 @@ package net.codejava;
  
 import java.sql.*;
 
+
+
 import net.codejava.User;
  
 public class UserDAO {
  
     public User checkLogin(String email, String password) throws SQLException,
             ClassNotFoundException {
-        String jdbcURL = "jdbc:mysql://127.0.0.1:3306/?user=root";
+        String jdbcURL = "jdbc:mysql://localhost:3306/vaalikone";
         String dbUser = "root";
         String dbPassword = "password";
  

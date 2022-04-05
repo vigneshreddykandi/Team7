@@ -5,13 +5,26 @@
 <head>
 <meta charset="utf-8">
 <title></title>
+    <link rel="stylesheet" href="html/style.css"/>
+
+
+	<%@ include file="/html/dashboard_header.html" %>
+
+
 </head>
 <body>
-    <div style="text-align: center">
-        <h1>Welcome to Admin Home page</h1>
+      <div class="dashboard">
+      <h1 class="title">Admin Dashboard</h1>
         <b>${user.fullname} (${user.email})</b>
         <br><br>
-        <a href="/logout">Logout</a>
-    </div>
-</body>
-</html>
+        
+        <div class="btn-dashboard">
+          <a href="#" class="btn btn-thin">Candidates</a>
+          <a href="#" class="btn btn-thin">Questions</a>
+        </div>
+      </div>
+    
+      
+      </body>
+  
+  </html>
