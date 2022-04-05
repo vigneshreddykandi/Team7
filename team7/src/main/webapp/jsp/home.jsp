@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-  <a href="http://localhost:8080/team7/home.jsp"> Home</a>
-  <a href="http://localhost:8080/team7/login.jsp"> Login</a>
-  <a href="http://localhost:8080/team7/logout.jsp"> Logout</a>
+  <a href="./jsp/home.jsp"> Home</a>
+  <a href=".jsp/login.jsp"> Login</a>
+  <a href=".jsp/logout.jsp"> Logout</a>
 </body>
 </html>
