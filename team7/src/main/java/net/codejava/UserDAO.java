@@ -10,7 +10,10 @@ public class UserDAO {
  
     public User checkLogin(String email, String password) throws SQLException,
             ClassNotFoundException {
-        String jdbcURL = "jdbc:mysql://localhost:3306/vaalikone";
+
+       
+        String jdbcURL = "jdbc:mysql://127.0.0.1:3306/vaalikone?user=root";
+
         String dbUser = "root";
         String dbPassword = "password";
  
