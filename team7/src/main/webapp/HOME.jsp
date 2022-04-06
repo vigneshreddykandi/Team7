@@ -5,6 +5,7 @@
 <head>
 <meta charset="utf-8">
 <title></title>
+
 <header >
 
 	<%@ include file="/html/dashboard_header.html" %>
