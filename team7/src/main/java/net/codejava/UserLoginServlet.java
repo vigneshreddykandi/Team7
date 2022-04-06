@@ -29,7 +29,7 @@ public class UserLoginServlet extends HttpServlet {
             if (user != null) {
                 HttpSession session = request.getSession();
                 session.setAttribute("User", user);
-                destPage = "dashboard.jsp";
+                destPage = "HOME.jsp";
                 
                 
             } else {
