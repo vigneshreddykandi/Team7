@@ -9,6 +9,7 @@ implements Serializable {
     private String email;
     private String password;
     
+    
  public void setFullname(String string) {
   // TODO Auto-generated method stub
   
