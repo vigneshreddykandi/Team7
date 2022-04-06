@@ -28,8 +28,10 @@ public class UserLoginServlet extends HttpServlet {
              
             if (user != null) {
                 HttpSession session = request.getSession();
-                session.setAttribute("user", user);
+                session.setAttribute("User", user);
                 destPage = "HOME.jsp";
+                
+                
             } else {
                 String message = "Invalid email/password";
                 request.setAttribute("message", message);
