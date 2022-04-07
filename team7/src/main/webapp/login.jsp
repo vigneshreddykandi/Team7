@@ -23,7 +23,8 @@ body  {
 <header >
 
 	<%@ include file="/html/adminheader.html" %>
-
+<a class="nav-link" aria-current="page" href=<% if (session.getAttribute("username")==null){out.println("/jsp/adminlogin.jsp");}else{out.println("/logout");} %>>
+               <% if (session.getAttribute("username")==null){out.println("Login");}else{out.println("logout");} %></a>
 </header>
 
 <meta charset="utf-8">

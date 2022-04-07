@@ -21,8 +21,8 @@
 	response.setHeader("Expires", "0"); //Proxies
 
 	// check for login 
-	if (session.getAttribute("username") == null) {
-		response.sendRedirect("../jsp/adminlogin.jsp");
+	if (session.getAttribute("email") == null) {
+		response.sendRedirect("login.jsp");
 	}
 	%>
 	<header>
@@ -39,14 +39,14 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item"><a class="nav-link" aria-current="page"
-							href=<%if (session.getAttribute("username") == null) {
-	out.println("/jsp/adminlogin.jsp");
+							href=<%if (session.getAttribute("email") == null) {
+	out.println("login.jsp");
 } else {
 	out.println("/logout");
 }%>>
 								<%
-								if (session.getAttribute("username") == null) {
-									out.println("Login");
+								if (session.getAttribute("email") == null) {
+									out.println("login");
 								} else {
 									out.println("logout");
 								}
@@ -95,7 +95,7 @@
 			</c:forEach>
 
 			<div class="info-img">
-				<a href="../jsp/adminmain.jsp"><button class="button"
+				<a href="./jsp/Dashboard.jsp"><button class="button"
 						type="button">Back to login main</button></a>
 			</div>
 		</div>
