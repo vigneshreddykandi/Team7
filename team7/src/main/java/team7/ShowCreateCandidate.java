@@ -12,8 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import dao.CandidateDao;
 import dao.Dao;
-import data.Question;
-
+import team7.Question;
 /**
  * Servlet implementation class ShowFish
  */

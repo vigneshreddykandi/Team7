@@ -1,7 +1,6 @@
 package team7;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,26 +10,25 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.CandidateDao;
+import dao.Dao;
 import team7.Candidate;
-/**
- * Servlet implementation class ShowFish
- */
-@WebServlet("/showallcandidates")
-public class showallcandidates extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-	private CandidateDao dao=null;
-	
-	@Override
-	public void init() {
-		
-		dao = new CandidateDao("jdbc:mysql://127.0.0.1:3306/vaalikone?user=root", "root", "password");
+import team7.Question;
 
+/**
+ * Servlet implementation class ReadToUpdate
+ */
+@WebServlet("/readcandidatetoupdate")
+public class ReadCandidateToUpdate extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private CandidateDao dao;
+	public void init() {
+		dao=new CandidateDao("jdbc:mysql://127.0.0.1:3306/Vaalikone?user=root", "root", "password");
 	}
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public showallcandidates() {
+    public ReadCandidateToUpdate() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -39,16 +37,15 @@ public class showallcandidates extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ArrayList<Candidate> list=null;
+		// TODO Auto-generated method stub
+		String id=request.getParameter("id");
+		Candidate c=null;
 		if (dao.getConnection()) {
-			list = dao.readAllCandidates();
+			c=dao.readCandidate(id);
 		}
-		else {
-			System.out.println("No connection to database for read all candidates");
-		}
-		request.setAttribute("candidatelist", list);
+		request.setAttribute("candidate", c);
 		
-		RequestDispatcher rd=request.getRequestDispatcher("/jsp/showallcandidates.jsp");
+		RequestDispatcher rd=request.getRequestDispatcher("/jsp/candidate/readcandidatetoupdate.jsp");
 		rd.forward(request, response);
 	}
 }

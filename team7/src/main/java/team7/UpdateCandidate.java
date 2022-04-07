@@ -11,26 +11,27 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.CandidateDao;
+import dao.Dao;
 import team7.Candidate;
 /**
  * Servlet implementation class ShowFish
  */
-@WebServlet("/showallcandidates")
-public class showallcandidates extends HttpServlet {
+@WebServlet("/updatecandidate")
+public class UpdateCandidate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private CandidateDao dao=null;
 	
 	@Override
 	public void init() {
 		
-		dao = new CandidateDao("jdbc:mysql://127.0.0.1:3306/vaalikone?user=root", "root", "password");
+		dao = new CandidateDao("jdbc:mysql://127.0.0.1:3306/electionmachine?user=root", "root", "password");
 
 	}
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public showallcandidates() {
+    public UpdateCandidate() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -40,15 +41,20 @@ public class showallcandidates extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ArrayList<Candidate> list=null;
+		Candidate c=new Candidate(request.getParameter("id"), request.getParameter("surname"),request.getParameter("firstname"),
+				 request.getParameter("party"),request.getParameter("location"), request.getParameter("ika"), 
+				 request.getParameter("whyCommission"), request.getParameter("whatAthesWantEdes") , request.getParameter("professional"));
+
 		if (dao.getConnection()) {
-			list = dao.readAllCandidates();
+			dao.CandidateDao(c);
+		}else {
+			response.getWriter().print("no connection for add candidate");
 		}
-		else {
-			System.out.println("No connection to database for read all candidates");
-		}
+		//read the candidate again in new object to bring the id from table auto increment
+		list = dao.readAllCandidate();
+
 		request.setAttribute("candidatelist", list);
-		
-		RequestDispatcher rd=request.getRequestDispatcher("/jsp/showallcandidates.jsp");
+		RequestDispatcher rd=request.getRequestDispatcher("/editallcandidates");
 		rd.forward(request, response);
 	}
 }

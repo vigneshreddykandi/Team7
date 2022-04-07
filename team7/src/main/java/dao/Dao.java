@@ -9,8 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import data.Question;
-
+import team7.Question;
 
 public class Dao {
 	private String url;
@@ -19,9 +18,9 @@ public class Dao {
 	private Connection conn;
 	
 	public Dao(String url, String user, String pass) {
-		this.url=url;
-		this.user=user;
-		this.pass=pass;
+		this.url="jdbc:mysql://127.0.0.1:3306/vaalikone?user=root";
+		this.user="root";
+		this.pass="password";
 	}
 	
 	// create getconnection method - create a connection to database 

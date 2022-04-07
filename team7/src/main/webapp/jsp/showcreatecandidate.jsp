@@ -2,10 +2,13 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
+
 import= java.util.ArrayList;
 <%@ page import="#"%>
 <%@ page import="#"%>
 
+<%@ page import="#"%>
+<%@ page import="java.util.ArrayList"%>
 <%@ page import="#"%>
 <%@ page import="#"%>
 <%@ page import="#"%>
@@ -23,14 +26,17 @@ import= java.util.ArrayList;
 	crossorigin="anonymous">
 <link href="../html/style.css" rel="stylesheet">
 
+
 <title>Election Machine questions</title>
 </head>
 <body>
+
 	<header >
 
 	<%@ include file="/html/dashboard_header.html" %>
 
 </header>
+
 	<main>
 		<h3>Create new Candidate</h3>
 
@@ -40,7 +46,9 @@ import= java.util.ArrayList;
 				<p id="description">Fill the form to create new candidate:</p>
 			</div>
 			<hr>
+
 			<!--  ArrayListquestion bla bla  -->
+
 
 			<form action="../createcandidate" method="get">
 

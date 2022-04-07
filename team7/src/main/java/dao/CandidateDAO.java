@@ -9,12 +9,11 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import data.Candidate;
-import data.CandidateAnswers;
-import data.Question;
-import data.Result;
-import data.UserId;
-
+import team7.Candidate;
+import team7.CandidateAnswers;
+import team7.Question;
+import team7.Result;
+import team7.UserId;
 
 public class CandidateDao {
 	private String url;
@@ -23,9 +22,9 @@ public class CandidateDao {
 	private Connection conn;
 	
 	public CandidateDao(String url, String user, String pass) {
-		this.url=url;
-		this.user=user;
-		this.pass=pass;
+		this.url="jdbc:mysql://127.0.0.1:3306/vaalikone?user=root";
+		this.user="root";
+		this.pass="password";
 	}
 	
 	// create getconnection method - create a connection to database 

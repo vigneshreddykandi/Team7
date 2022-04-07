@@ -7,7 +7,7 @@
 
 -- create a user and user's password
 -- credentials pena/kukkuu has all privileges to all all tables of database vaalikone (exept grant privilege)
-grant all on vaalikone.* to pena@localhost identified by 'kukkuu';
+-- grant all on vaalikone.* to pena@localhost identified by 'kukkuu';
 
 -- if there exists database vaalikone, drop it
 drop database if exists vaalikone;
@@ -25,6 +25,12 @@ use vaalikone;
 DROP TABLE if exists EHDOKKAAT;
 DROP TABLE if exists KYSYMYKSET;
 DROP TABLE if exists VASTAUKSET;
+DROP TABLE if exists CANDIDATE;
+DROP TABLE if exists QUESTION;
+DROP TABLE if exists CANDIDATEANSWERS;
+DROP TABLE if exists RESULT;
+DROP TABLE if exists STATISTICS;
+
 
 -- create User login
 CREATE TABLE users (
@@ -32,10 +38,8 @@ CREATE TABLE users (
   password varchar(45) NOT NULL,
   fullname varchar(45) NOT NULL
 ) ENGINE=InnoDB;
-INSERT INTO users VALUES ('wafa@gmail.com','password','loyalfae' );
-INSERT INTO users VALUES ('nazanin@gmail.com','password','nazanin');
-INSERT INTO users VALUES ('vignesh@gmail.com','password','vignesh' );
-INSERT INTO users VALUES ('mona@gmail.com','password','mona' );
+
+
 
 -- create a table ehdokkaat (mysql does not bother the case of letters - in this case)
 CREATE TABLE EHDOKKAAT (
@@ -57,6 +61,12 @@ CREATE TABLE KYSYMYKSET (
    KYSYMYS VARCHAR(100),
    PRIMARY KEY (KYSYMYS_ID)
 );
+-- create a table ANSWER
+CREATE TABLE ANSWER (
+   ID INTEGER NOT NULL,
+   ANSWER INTEGER default 0,
+   PRIMARY KEY (ID)
+);
 
 -- create a table vastaukset
 CREATE TABLE VASTAUKSET (
@@ -66,6 +76,106 @@ CREATE TABLE VASTAUKSET (
    KOMMENTTI VARCHAR(50),
    PRIMARY KEY (EHDOKAS_ID, KYSYMYS_ID)
 );
+
+-- create a table CANDIDATE (mysql does not bother the case of letters - in this case)
+CREATE TABLE CANDIDATE (
+   ID INTEGER NOT NULL,
+   SURNAME VARCHAR(25),
+   FIRSTNAME VARCHAR(25),
+   PARTY VARCHAR(50),
+   LOCATION VARCHAR(25),
+   IKA INTEGER,
+   WHY_COMMISSION VARCHAR(250),
+   WHAT_ATHES_WANT_EDES VARCHAR(2000),
+   PROFESSIONAL VARCHAR(50),
+   PRIMARY KEY (ID)
+);
+
+-- create a table QUESTIONS
+
+
+CREATE TABLE QUESTION (
+   ID INTEGER NOT NULL auto_increment,
+   QUESTION VARCHAR (3000),
+   ANSWER INTEGER default 0,
+   PRIMARY KEY (ID)
+);
+-- create a table CANDIDATE ANSWERS
+CREATE TABLE CANDIDATEANSWERS (
+ID INTEGER NOT NULL auto_increment,
+   CANDIDATEID INTEGER NOT NULL,
+   QUESTION INTEGER NOT NULL,
+   CANDIDATEANS INTEGER not null default 0,
+   COMMENT varchar(100),
+   PRIMARY KEY (ID)
+);
+
+-- create a table STATISTICS
+CREATE TABLE STATISTICS (
+QUESTION INTEGER NOT NULL,
+    numAns1 INTEGER NOT NULL,
+    numAns2 INTEGER,
+numAns3 INTEGER,
+    numAns4 INTEGER,
+    numAns5 INTEGER,
+   PRIMARY KEY (QUESTION)
+);
+
+-- create a table RESULT
+CREATE TABLE RESULT (
+ID INTEGER NOT NULL auto_increment,
+   CANDIDATEID INTEGER NOT NULL,
+CUSTOMERID INTEGER NOT NULL,
+   RESULT DOUBLE default 0,
+   PRIMARY KEY (ID)
+);
+-- insert values into the table QUESTION
+INSERT INTO QUESTION (QUESTION) VALUES ("QUESTION 1");
+INSERT INTO QUESTION (QUESTION) VALUES ("2.");
+INSERT INTO QUESTION (QUESTION) VALUES (" 3");
+INSERT INTO QUESTION (QUESTION) VALUES (" 4 ");
+INSERT INTO QUESTION (QUESTION) VALUES (" 5");
+INSERT INTO QUESTION (QUESTION) VALUES (" 6 ");
+INSERT INTO QUESTION (QUESTION) VALUES (" 7 ");
+INSERT INTO QUESTION (QUESTION) VALUES (" 8 ");
+INSERT INTO QUESTION (QUESTION) VALUES (" 9 ");
+INSERT INTO QUESTION (QUESTION) VALUES (" 10 ");
+INSERT INTO QUESTION (QUESTION) VALUES (" 11 ");
+INSERT INTO QUESTION (QUESTION) VALUES ("12");
+INSERT INTO QUESTION (QUESTION) VALUES (" 13 ");
+INSERT INTO QUESTION (QUESTION) VALUES (" 14 .");
+INSERT INTO QUESTION (QUESTION) VALUES (" 15 ");
+INSERT INTO QUESTION (QUESTION) VALUES ("16");
+INSERT INTO QUESTION (QUESTION) VALUES (" 17 .");
+INSERT INTO QUESTION (QUESTION) VALUES ("18 ");
+INSERT INTO QUESTION (QUESTION) VALUES ("19");
+INSERT INTO QUESTION (QUESTION) VALUES ("20");
+
+
+
+-- insert values into the table CANDIDATE
+INSERT INTO CANDIDATE VALUES (1, "MARVEL" ,"SPIDERMAN", "MARVEL", "HELSINKI", 12, "VOTE ME FOR BETTER FUTURE "," NOTHING "," Member of Parliament ");
+INSERT INTO CANDIDATE VALUES (2, "MARVEL" ,"IRONMAN", "MARVEL", "HELSINKI", 12, "VOTE ME FOR BETTER FUTURE "," NOTHING "," Member of Parliament ");
+INSERT INTO CANDIDATE VALUES (3, "MARVEL" ,"CAPTAIN AMERICA", "MARVEL", "HELSINKI", 12, "VOTE ME FOR BETTER FUTURE "," NOTHING "," Member of Parliament ");
+INSERT INTO CANDIDATE VALUES (4, "MARVEL" ,"THOR", "MARVEL", "HELSINKI", 12, "VOTE ME FOR BETTER FUTURE "," NOTHING "," Member of Parliament ");
+INSERT INTO CANDIDATE VALUES (5, "MARVEL" ,"MONKEY", "MARVEL", "HELSINKI", 12, "VOTE ME FOR BETTER FUTURE "," NOTHING "," Member of Parliament ");
+INSERT INTO CANDIDATE VALUES (6, "MARVEL" ,"GIRRAFEE", "MARVEL", "HELSINKI", 12, "VOTE ME FOR BETTER FUTURE "," NOTHING "," Member of Parliament ");
+INSERT INTO CANDIDATE VALUES (7, "MARVEL" ,"LION", "MARVEL", "HELSINKI", 12, "VOTE ME FOR BETTER FUTURE "," NOTHING "," Member of Parliament ");
+INSERT INTO CANDIDATE VALUES (8, "MARVEL" ,"TIGER", "MARVEL", "HELSINKI", 12, "VOTE ME FOR BETTER FUTURE "," NOTHING "," Member of Parliament ");
+INSERT INTO CANDIDATE VALUES (9, "MARVEL" ,"LIZARD", "MARVEL", "HELSINKI", 12, "VOTE ME FOR BETTER FUTURE "," NOTHING "," Member of Parliament ");
+INSERT INTO CANDIDATE VALUES (10, "MARVEL" ,"BATMAN", "MARVEL", "HELSINKI", 12, "VOTE ME FOR BETTER FUTURE "," NOTHING "," Member of Parliament ");
+INSERT INTO CANDIDATE VALUES (11, "MARVEL" ,"TOM", "MARVEL", "HELSINKI", 12, "VOTE ME FOR BETTER FUTURE "," NOTHING "," Member of Parliament ");
+INSERT INTO CANDIDATE VALUES (12, "MARVEL" ,"JERRY", "MARVEL", "HELSINKI", 12, "VOTE ME FOR BETTER FUTURE "," NOTHING "," Member of Parliament ");
+INSERT INTO CANDIDATE VALUES (13, "MARVEL" ,"JACK", "MARVEL", "HELSINKI", 12, "VOTE ME FOR BETTER FUTURE "," NOTHING "," Member of Parliament ");
+INSERT INTO CANDIDATE VALUES (14, "MARVEL" ,"JILL", "MARVEL", "HELSINKI", 12, "VOTE ME FOR BETTER FUTURE "," NOTHING "," Member of Parliament ");
+INSERT INTO CANDIDATE VALUES (15, "MARVEL" ,"JHONNY", "MARVEL", "HELSINKI", 12, "VOTE ME FOR BETTER FUTURE "," NOTHING "," Member of Parliament ");
+INSERT INTO CANDIDATE VALUES (16, "MARVEL" ,"WALKER", "MARVEL", "HELSINKI", 12, "VOTE ME FOR BETTER FUTURE "," NOTHING "," Member of Parliament ");
+INSERT INTO CANDIDATE VALUES (17, "MARVEL" ,"ANYNOMOUS", "MARVEL", "HELSINKI", 12, "VOTE ME FOR BETTER FUTURE "," NOTHING "," Member of Parliament ");
+INSERT INTO CANDIDATE VALUES (18, "MARVEL" ,"BRUT", "MARVEL", "HELSINKI", 12, "VOTE ME FOR BETTER FUTURE "," NOTHING "," Member of Parliament ");
+INSERT INTO CANDIDATE VALUES (19, "MARVEL" ,"SRITH", "MARVEL", "HELSINKI", 12, "VOTE ME FOR BETTER FUTURE "," NOTHING "," Member of Parliament ");
+INSERT INTO CANDIDATE VALUES (20, "MARVEL" ,"SLAVE", "MARVEL", "HELSINKI", 12, "VOTE ME FOR BETTER FUTURE "," NOTHING "," Member of Parliament ");
+
+
 
 
 -- insert values into the table ehdokkaat
@@ -132,3 +242,12 @@ INSERT INTO VASTAUKSET VALUES  (1, 17, 4, "ehdokkaan 1 vastaus kysymykseen 17");
 INSERT INTO VASTAUKSET VALUES  (1, 18, 4, "ehdokkaan 1 vastaus kysymykseen 18");
 INSERT INTO VASTAUKSET VALUES  (1, 19, 3, "ehdokkaan 1 vastaus kysymykseen 19");
 INSERT INTO VASTAUKSET VALUES  (2, 1, 3, "ehdokkaan 2 vastaus kysymykseen 1");
+
+
+
+
+-- create User values
+INSERT INTO users VALUES ('wafa@gmail.com','password','loyalfae' );
+INSERT INTO users VALUES ('nazanin@gmail.com','password','nazanin');
+INSERT INTO users VALUES ('vignesh@gmail.com','password','vignesh' );
+INSERT INTO users VALUES ('mona@gmail.com','password','mona' );
