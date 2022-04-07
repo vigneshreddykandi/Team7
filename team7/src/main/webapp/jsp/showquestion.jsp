@@ -33,7 +33,7 @@
     </div>
 <hr>
 	<%! //CounterIndex index = new  CounterIndex(0);%>
-	<%  ArrayList<Question> questionList=(ArrayList<Question>)request.getAttribute("questionlist");%>
+	<%  ArrayList <Question> questionList=(ArrayList <Question>)request.getAttribute("questionlist");%>
 	
 	<h1><%=CounterIndex.currentIndex()+1+" / "+ questionList.size()%></h1>
 	<hr>
