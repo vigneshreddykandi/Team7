@@ -24,7 +24,7 @@ public class Showallcandidates extends HttpServlet {
 	@Override
 	public void init() {
 		
-		dao = new CandidateDAO("jdbc:mysql://127.0.0.1:3306/vaalikone?user=root", "root", "password");
+		dao = new CandidateDao("jdbc:mysql://127.0.0.1:3306/vaalikone?user=root", "root", "password");
 
 	}
        
@@ -41,8 +41,8 @@ public class Showallcandidates extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ArrayList<Candidate> list=null;
-		if (DAO.getConnection()) {
-			list = DAO.readAllCandidates();
+		if (dao.getConnection()) {
+			list = dao.readAllCandidates();
 		}
 		else {
 			System.out.println("No connection to database for read all candidates");
