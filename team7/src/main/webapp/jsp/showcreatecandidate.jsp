@@ -3,12 +3,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <%@ page import="java.util.ArrayList"%>
-<%@ page import="data.Question"%>
-<%@ page import="data.CounterIndex"%>
+<%@ page import="#"%>
+<%@ page import="#"%>
 
 <%@ page import="java.sql.Connection"%>
 <%@ page import="java.sql.DriverManager"%>
-<%@ page import="dao.Dao"%>
+<%@ page import="#"%>
 
 
 <!DOCTYPE html>
@@ -69,9 +69,7 @@
 				<p id="description">Fill the form to create new candidate:</p>
 			</div>
 			<hr>
-			<%
-			ArrayList<Question> questionList = (ArrayList<Question>) request.getAttribute("questionlist");
-			%>
+			<% ArrayList<Question> questionList = (ArrayList<Question>) request.getAttribute("questionlist");%>
 
 			<form action="../createcandidate" method="get">
 
