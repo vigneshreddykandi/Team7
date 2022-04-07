@@ -41,7 +41,7 @@ body  {
   <div class="card-body">
     <h5 class="card-title">List of candidates</h5>
     <p class="card-text">See list of candidates and their information.</p>
-    <a href="#" class="btn btn-primary">Go to list</a>
+    <a href="./jsp/showallcandidates.jsp" class="btn btn-primary">Go to list</a>
   </div> 
 </div>
     </div>
