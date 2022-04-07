@@ -22,7 +22,7 @@ public class ReadCandidateToUpdate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private CandidateDao dao;
 	public void init() {
-		dao=new CandidateDao("jdbc:mysql://127.0.0.1:3306/electionmachine?user=root", "root", "password");
+		dao=new CandidateDao("jdbc:mysql://127.0.0.1:3306/Vaalikone?user=root", "root", "password");
 	}
        
     /**
