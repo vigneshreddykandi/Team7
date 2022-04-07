@@ -9,7 +9,7 @@
 <header >
 
 	<%@ include file="/html/dashboard_header.html" %>
-
+	
 </header>
 </head>
 <body>
