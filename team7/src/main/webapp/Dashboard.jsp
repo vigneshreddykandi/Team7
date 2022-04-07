@@ -18,7 +18,30 @@
         <b>${user.fullname} (${user.email})</b>
         <br><br>
         <!-- <a href="/logout">Logout</a> -->
+<<<<<<< Updated upstream
     </div>
+=======
+    </div> --%>
+		
+    
+    <main>
+	  <div class="container">
+	  	<hr>
+	    <h1>Admin dashboard</h1>
+	    <hr>
+	   	<img src="http://cdn.onlinewebfonts.com/svg/img_325788.png" alt="admin icon" style="width:100px;height:100px;"><br>   
+	   	 <a href="./jsp/dashboard_candidates.jsp"><button class="button" type="button">Candidates</button></a>
+	   	 <a href="./jsp/questions.jsp"><button class="button" type="button">Questions</button></a>
+	   	 
+<!-- 		<a href="../editallcandidates"><button class="button" type="button">Edit Candidates</button></a> -->
+<!-- 		<a href="../showcreatecandidate"><button class="button" type="button">New Candidate</button></a> -->
+<!-- 		<a href="../editallquestions"><button class="button" type="button">Edit Questions</button></a> -->
+		
+		
+
+	 </div>
+</main>
+>>>>>>> Stashed changes
 </body>
 
 <footer>
