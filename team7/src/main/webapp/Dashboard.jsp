@@ -13,7 +13,6 @@
 </header>
 </head>
 <body>
-<<<<<<< Updated upstream
     <%-- <div style="text-align: center">
 =======
    <%--  <div style="text-align: center">
