@@ -86,7 +86,7 @@
 </body>
 <script type="text/javascript">
 	let i =  parseInt(<%=CounterIndex.currentIndex()%>);
-	let x = parseInt(<%=questionList.size()%>);
+	let x = parseInt(<%questionList.size()%>);
 	if (i==0){
 		document.getElementById("previous").disabled = true;
 	}

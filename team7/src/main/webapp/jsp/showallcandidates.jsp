@@ -22,9 +22,6 @@
 <div class="col-sm-4">
     <div id="project1" class="project_cards">
        <div class="card_photo">
-           <div class="demobox" id="demobox1">
-               <img src="./images/Candidate${candidate.id}.jpg" alt="Candidate - tribute page" style="width:400px;height:260px;">
-           </div>
        </div>
        <div class="card-header">
            <h4>${candidate.firstname} - ${candidate.surname}</h4>
