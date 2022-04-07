@@ -47,7 +47,7 @@
 }%>>
 								<%
 								if (session.getAttribute("username") == null) {
-									out.println("Login");
+									out.println("login");
 								} else {
 									out.println("logout");
 								}
