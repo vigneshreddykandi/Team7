@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import dao.CandidateDao;
 import dao.Dao;
-import data.Candidate;
-import data.Question;
+import team7.Candidate;
+import team7.Question;
 
 /**
  * Servlet implementation class ReadToUpdate
