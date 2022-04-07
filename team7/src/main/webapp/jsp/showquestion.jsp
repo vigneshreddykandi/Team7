@@ -2,12 +2,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
  
  <%@ page import="java.util.ArrayList" %>   
- <%@ page import="data.Question" %>
- <%@ page import="data.CounterIndex" %>
+ <%@ page import="#" %>
+ <%@ page import="#" %>
  
  <%@ page import="java.sql.Connection" %>  
  <%@ page import="java.sql.DriverManager" %>   
- <%@ page import="dao.Dao" %> 
+ <%@ page import="#" %> 
  
 
 <!DOCTYPE html>
@@ -33,7 +33,7 @@
     </div>
 <hr>
 	<%! //CounterIndex index = new  CounterIndex(0);%>
-	<%  ArrayList<Question> questionList=(ArrayList<Question>)request.getAttribute("questionlist");%>
+	<%  ArrayList <Question> questionList=(ArrayList <Question>)request.getAttribute("questionlist");%>
 	
 	<h1><%=CounterIndex.currentIndex()+1+" / "+ questionList.size()%></h1>
 	<hr>
@@ -86,7 +86,7 @@
 </body>
 <script type="text/javascript">
 	let i =  parseInt(<%=CounterIndex.currentIndex()%>);
-	let x = parseInt(<%=questionList.size()%>);
+	let x = parseInt(<%questionList.size()%>);
 	if (i==0){
 		document.getElementById("previous").disabled = true;
 	}
