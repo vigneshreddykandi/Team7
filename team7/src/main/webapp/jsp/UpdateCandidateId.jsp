@@ -38,7 +38,7 @@ while(resultSet.next()){
 <body>
 <header>
 
-	<%@ include file="/html/userheader.html" %>
+	<%@ include file="/html/dashboard_header.html" %>
 
 
 </header>
