@@ -30,7 +30,7 @@
 	    <h1>Admin dashboard</h1>
 	    <hr>
 	   	<img src="http://cdn.onlinewebfonts.com/svg/img_325788.png" alt="admin icon" style="width:100px;height:100px;"><br>   
-	   	 <a href="./jsp/dashboard_candidates.jsp"><button class="button" type="button">Candidates</button></a>
+	   	 <a href="./jsp/UpdateCandidate.jsp"><button class="button" type="button">View/Edit Candidates</button></a>
 	   	 <a href="#"><button class="button" type="button">Questions</button></a>
 	   	 
 <!-- 		<a href="../editallcandidates"><button class="button" type="button">Edit Candidates</button></a> -->

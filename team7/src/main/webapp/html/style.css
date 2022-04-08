@@ -1,4 +1,15 @@
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
 
+a:hover, a:active {
+  background-color: red;
+}
 
 
 .header {
@@ -53,7 +64,7 @@
 height: 300px;
 }
 
-<<<<<<< Updated upstream
+
 #login-form{
 	
 	text-align:center;
@@ -61,7 +72,7 @@ height: 300px;
     margin-bottom:80px;
     width:auto;    
 }
-=======
 
 
->>>>>>> Stashed changes
+
+

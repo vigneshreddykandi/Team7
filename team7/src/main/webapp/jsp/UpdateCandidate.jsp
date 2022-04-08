@@ -1,9 +1,11 @@
+<%@ page import="java.sql.*" %> 
+<%@ page import="java.io.*" %> 
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%
-String id = request.getParameter("userid");
+String ID = request.getParameter("ID");
 String driver = "com.mysql.jdbc.Driver";
 String connectionUrl = "jdbc:mysql://localhost:3306/";
 String database = "vaalikone";
@@ -24,22 +26,28 @@ ResultSet resultSet = null;
     <title>Election Machine</title>
     <link rel="stylesheet" href="/html/style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+
+</style>
 </head>
+
 <html>
 <body>
-
 <header>
 
-	<%@ include file="/html/userheader.html" %>
+	<%@ include file="/html/dashboard_header.html" %>
 
 </header>
+
+
+<a href="/jsp/AddCandidate.jsp" >Add candidate</a>
 
 <h1 allign = "centre"> List of candidates</h1>
 <table class="table table-dark table-striped">
   <thead>
     
 <tr>
-
+<td>Id</td>
 <td>surname</td>
 <td>first name</td>
 <td>Party</td>
@@ -48,6 +56,9 @@ ResultSet resultSet = null;
 <td>reason</td>
 <td>changes</td>
 <td>profession</td>
+<td>Action</td>
+
+
 
 </tr>
 <%
@@ -59,7 +70,7 @@ resultSet = statement.executeQuery(sql);
 while(resultSet.next()){
 %>
 <tr>
-
+<td><%=resultSet.getString("ID") %></td>
 <td><%=resultSet.getString("SURNAME") %></td>
 <td><%=resultSet.getString("FIRSTNAME") %></td>
 <td><%=resultSet.getString("PARTY") %></td>
@@ -68,6 +79,9 @@ while(resultSet.next()){
 <td><%=resultSet.getString("WHY_COMMISSION") %></td>
 <td><%=resultSet.getString("WHAT_ATHES_WANT_EDES") %></td>
 <td><%=resultSet.getString("PROFESSIONAL") %></td>
+<td><a href="/jsp/UpdateCandidateId.jsp?ID=<%=resultSet.getString("ID")%>">update</a></td>
+<td><a href="/jsp/deletecandidate.jsp?ID=<%=resultSet.getString("ID") %>">Delete</button></a></td>
+
 
 
 
@@ -80,38 +94,6 @@ e.printStackTrace();
 }
 %>
 </table> 
-=======
-<main>
-<div class="form-container2">
-<h1>Candidates</h1>
-<div class="row">
-<c:forEach var="candidate" items="${requestScope.candidatelist}">
-<div class="col-sm-4">
-    <div id="project1" class="project_cards">
-       <div class="card_photo">
-       </div>
-       <div class="card-header">
-           <h4>${candidate.firstname} - ${candidate.surname}</h4>
-       </div>
-       <div class="card-describe">
-       	<p class="card-text"><b>Candidate id:</b> ${candidate.id}</p>	    
-	   	<p class="card-text"><b>Candidate Party:</b> ${candidate.party}</p>	    
-	    <p class="card-text"><b>Candidate Location:</b> ${candidate.location}</p>    
-	    <p class="card-text"><b>Candidate profession:</b> ${candidate.professional}</p>
-	    <a href='../showonecandidate?id=${candidate.id}' class="btn btn-primary">More Information</a>
-	    
-       </div>
-   </div>
-</div>	
-	<!--  <a href='../deletecandidate?id=${candidate.id}'><button class="submit-button">Delete</button></a> 
-	<a href='../readtoupdatecandidate?id=${candidate.id}'><button class="submit-button">Update</button></a>-->
-</c:forEach>
-</div>
-
-</div>
-</main>
-</body>
-
 <footer>
   	<%@ include file="/html/footer.html" %>
 
@@ -121,3 +103,4 @@ e.printStackTrace();
 
 
 </html>
+
