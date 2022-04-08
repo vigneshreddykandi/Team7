@@ -79,7 +79,7 @@ public class CandidateDao {
 	        return status;  
 	    }  
 	 
-	            
+	         
 	 public static int delete(int ID){  
 		 int status=0; 
 		 try{  
@@ -147,3 +147,7 @@ public class CandidateDao {
 	        return list;  
 	    }  
 	}  
+
+
+
+

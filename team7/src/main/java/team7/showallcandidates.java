@@ -16,7 +16,7 @@ import team7.Candidate;
  * Servlet implementation class ShowFish
  */
 @WebServlet("/showallcandidates")
-public class Showallcandidates extends HttpServlet {
+public class showallcandidates extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private CandidateDao dao=null;
 	
@@ -30,7 +30,7 @@ public class Showallcandidates extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Showallcandidates() {
+    public showallcandidates() {
         super();
         // TODO Auto-generated constructor stub
     }
