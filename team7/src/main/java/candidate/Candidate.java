@@ -2,72 +2,72 @@ package candidate;
 
 public class Candidate {
 	private int ID;
-	private String surname; 
-	private String firstname;
-	private String party;
-	private String location;
-	private int ika;
-	private String why_commission;
-	private String what_athes;
-	private String professional;
-	
+	private String SURNAME; 
+	private String FIRSTNAME;
+	private String PARTY;
+	private String LOCATION;
+	private String IKA;
+	private String WHY_COMMISSION;
+	private String WHAT_ATHES_WANT_EDES;
+	private String PROFESSIONAL;
 	public int getID() {
 		return ID;
 	}
 	public void setID(int iD) {
 		ID = iD;
 	}
-	public String getSurname() {
-		return surname;
+	public String getSURNAME() {
+		return SURNAME;
 	}
-	public void setSurname(String surname) {
-		this.surname = surname;
+	public void setSURNAME(String sURNAME) {
+		SURNAME = sURNAME;
 	}
-	public String getFirstname() {
-		return firstname;
+	public String getFIRSTNAME() {
+		return FIRSTNAME;
 	}
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+	public void setFIRSTNAME(String fIRSTNAME) {
+		FIRSTNAME = fIRSTNAME;
 	}
-	public String getParty() {
-		return party;
+	public String getPARTY() {
+		return PARTY;
 	}
-	public void setParty(String party) {
-		this.party = party;
+	public void setPARTY(String pARTY) {
+		PARTY = pARTY;
 	}
-	public String getLocation() {
-		return location;
+	public String getLOCATION() {
+		return LOCATION;
 	}
-	public void setLocation(String location) {
-		this.location = location;
+	public void setLOCATION(String lOCATION) {
+		LOCATION = lOCATION;
 	}
-	public int getIka() {
-		return ika;
+	public String getIKA() {
+		return IKA;
 	}
-	public void setIka(int ika) {
-		this.ika = ika;
+	public void setIKA(String iKA) {
+		IKA = iKA;
 	}
-	public String getWhy_commission() {
-		return why_commission;
+	public String getWHY_COMMISSION() {
+		return WHY_COMMISSION;
 	}
-	public void setWhy_commission(String why_commission) {
-		this.why_commission = why_commission;
+	public void setWHY_COMMISSION(String wHY_COMMISSION) {
+		WHY_COMMISSION = wHY_COMMISSION;
 	}
-	public String getWhat_athes() {
-		return what_athes;
+	public String getWHAT_ATHES_WANT_EDES() {
+		return WHAT_ATHES_WANT_EDES;
 	}
-	public void setWhat_athes(String what_athes) {
-		this.what_athes = what_athes;
+	public void setWHAT_ATHES_WANT_EDES(String wHAT_ATHES_WANT_EDES) {
+		WHAT_ATHES_WANT_EDES = wHAT_ATHES_WANT_EDES;
 	}
-	public String getProfessional() {
-		return professional;
+	public String getPROFESSIONAL() {
+		return PROFESSIONAL;
 	}
-	public void setProfessional(String professional) {
-		this.professional = professional;
+	public void setPROFESSIONAL(String pROFESSIONAL) {
+		PROFESSIONAL = pROFESSIONAL;
 	}
 	
 	
 	
-
-
+	
+	
 }
+	
