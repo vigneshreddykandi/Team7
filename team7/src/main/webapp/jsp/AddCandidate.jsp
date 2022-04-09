@@ -31,38 +31,38 @@
 
 <div class="mb-3">
 SURNAME:<br>
-<input type="text" name="SURNAME" class="form-control">
+<input type="text" name="SURNAME" class="form-control" required>
   </div>
 
 <div class="mb-3">
 FIRSTNAME:<br>
-<input type="text" name="FIRSTNAME" class="form-control">
+<input type="text" name="FIRSTNAME" class="form-control" required>
 </div>
 <div class="mb-3">
 
 PARTY:<br>
-<input type="text" name="PARTY" class="form-control">
+<input type="text" name="PARTY" class="form-control" required>
 </div>
 <div class="mb-3">
 LOCATION:<br>
-<input type="text" name="LOCATION" class="form-control">
+<input type="text" name="LOCATION" class="form-control" required>
 </div>
 <div class="mb-3">
 IKA:<br>
-<input type="text" name="IKA" class="form-control">
+<input type="text" name="IKA" class="form-control" required>
 </div>
 <div class="mb-3">
 
 REASON:<br>
-<input type="text" name="WHY_COMMISSION" class="form-control">
+<input type="text" name="WHY_COMMISSION" class="form-control" required >
 </div>
 <div class="mb-3">
 CHANGES:<br>
-<input type="text" name="WHAT_ATHES_WANT_EDES" class="form-control">
+<input type="text" name="WHAT_ATHES_WANT_EDES" class="form-control"required>
 </div>
 <div class="mb-3">
 PROFESSIONAL:<br>
-<input type="text" name="PROFESSIONAL" class="form-control">
+<input type="text" name="PROFESSIONAL" class="form-control"required>
 </div>
 <br><br>
 <input type="submit" value="submit"  class="btn btn-primary">
