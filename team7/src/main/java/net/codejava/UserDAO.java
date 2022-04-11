@@ -10,7 +10,7 @@ import net.codejava.User;
 public class UserDAO {
  
     public User checkLogin(String email, String password) throws SQLException,
-            ClassNotFoundException {
+          ClassNotFoundException {
 
        
         String jdbcURL = "jdbc:mysql://127.0.0.1:3306/vaalikone?user=root";
