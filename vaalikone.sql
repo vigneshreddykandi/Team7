@@ -40,7 +40,6 @@ CREATE TABLE users (
 ) ENGINE=InnoDB;
 
 
-
 -- create a table ehdokkaat (mysql does not bother the case of letters - in this case)
 CREATE TABLE EHDOKKAAT (
    EHDOKAS_ID INTEGER NOT NULL,
