@@ -51,8 +51,8 @@ ResultSet resultSet = null;
 <td>surname</td>
 <td>first name</td>
 <td>Party</td>
-<td>Password</td>
 <td>location</td>
+<td>Ika</td>
 <td>reason</td>
 <td>changes</td>
 <td>profession</td>
