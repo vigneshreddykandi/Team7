@@ -1,6 +1,20 @@
 
 # Election machine - Team 7 
 
+## Project Description
+An App allowing the user/customer to check who is the best candidate to vote for based on a series of constructive questions of political views.
+
+•	In the software, functionality needed is for admin to add, edit and remove candidates.
+•	In the software , functionality needed is for admin to add, edit and remove questions (statements).
+•	In the software, functionality needed is for candidates to answer the questions and edit and delete their answers.
+•	In the software, functionality needed for an end user to answer the questions and see the candidate or candidates which best match to the answers of the end user, so that the end user can select whom to vote.
+
+PROJECT ASSUMPTIONS:
+
+Candidate answers will be send to collect information from candidates, which they will be added automaticaally to the user interface. 
+All visitors will be able to take a simple quiz that help them get the right candidate to vote for quickly by displaying the matching percentage per candidate.
+Admnin role will be able to manage the whole back office by adding ,editing or deleting questions and candidates.
+All data is stored in the database and inserted in the software directly.
 
 
 ## Team members
@@ -13,8 +27,31 @@
 
 ## Features
 
-- Admin login
-- Admin can add, edit and remove candidates.
+- Candidate: 
+• Candidate information is stored in the candidate table in the database. All information displayed on the candidates list is coming from the database 
+• Available functions are adding, deleting and editng the candidates and only the admin can do that after logging in. 
+- Questions: 
+• Questions are stored in the question table in the database. 
+• Function is as adding adding questions for the admin after logging in, they directly get stored in the database 
+• Upon creating a new questions answers for the existing candidates are randomized and inserted into answer table in the database. 
+- Login/Logout: 
+• Admin can log in using his email and password 
+• New session is created for each logged in admin
 
 
+
+## What has been used :
+- Html/JSP
+- Java
+- MysQl
+- Servlet Crud
+- Java Servlet
+
+## To access as Admin :
+Use the following credentials: 
+ 
+ADMIN LOGIN INFO USER: 
+wafa@gmail.com or nazanin@gmail.com or vignesh@gmail.com or mona@gmail.com 
+ADMIN LOGIN PASSWORD:
+password
 
