@@ -1,7 +1,7 @@
 
 # Election machine - Team 7 
 
-## Project Description
+## PROJECT DESCRIPTION 
 An App allowing the user/customer to check who is the best candidate to vote for based on a series of constructive political questions
 
 •	In the software, functionality needed is for admin to add, edit and remove candidates.
@@ -9,18 +9,12 @@ An App allowing the user/customer to check who is the best candidate to vote for
 •	In the software, functionality needed is for candidates to answer the questions and edit and delete their answers.
 •	In the software, functionality needed for an end user to answer the questions and see the candidate or candidates which best match to the answers of the end user, so that the end user can select whom to vote.
 
-## PROJECT ASSUMPTIONS:
 
-Candidate answers will be send to collect information from candidates, which they will be added automaticaally to the user interface. 
-All visitors will be able to take a simple quiz that help them get the right candidate to vote for quickly by displaying the matching percentage per candidate.
-Admnin role will be able to manage the whole back office by adding ,editing or deleting questions and candidates.
-All data is stored in the database and inserted in the software directly.
 
-## PROJECT EXECUTION:
+## PROJECT EXECUTION by Team 7:
 The project went smooth with us, 4 talented determined computer application students that nothing can stop them to be soltion oriented and be always eager to learn and open to share knowledge.Everyone contributed in all the features listed below , yet we chose to assign a responsible for each one of them to make sure all the micro tasks are going according to our timeline and daily workload.
 Nevertheless,we made sure to divide tasks between us and capitalize on each other's strenght to achieve the best version of the election machine: 
 Mona was the main responsible for Login and Logout process, Vignesh was database master and finally Nazanin and Wafa were Questions/Candidate responsibles.
-
 
 
 
@@ -29,7 +23,7 @@ Mona was the main responsible for Login and Logout process, Vignesh was database
  - [Nazanin Fallah ](https://github.com/nazaninfallahh)
  - [Wafa Faquir](https://github.com/Loyalfae)
  - [Mona Achaaoud](https://github.com/mona21000)
-  - [Vignesh Reddy Kandi ](https://github.com/vigneshreddykandi)
+ - [Vignesh Reddy Kandi ](https://github.com/vigneshreddykandi)
 
 
 ## Features
