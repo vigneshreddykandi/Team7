@@ -2,6 +2,13 @@ package questionss;
 
 import java.io.Serializable;
 
+/**
+ * @author vigneshkandi, nazanin fallah , wafa faquir
+ * 
+ * 
+ * from here we generated getters and setters
+ *
+ */
 public class Questionss implements Serializable{
 	
 	private int ID;

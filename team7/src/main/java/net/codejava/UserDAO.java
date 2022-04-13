@@ -1,5 +1,10 @@
 package net.codejava;
- 
+ /** 
+ * @author mona_achaaoud 
+ * checkLogin() method checks the login information entered by the user against the data in the database 
+ */
+
+
 import java.sql.*;
 
 
@@ -8,6 +13,14 @@ import java.sql.*;
 import net.codejava.User;
  
 public class UserDAO {
+	
+	 /** 
+     * @param email of the admin 
+     * @param password entered by admin  
+     * @return user login 
+     * @throws SQLException provides information on a database access error 
+     * @throws ClassNotFoundException gets thrown when it tries to load in the user class 
+     */
  
     public User checkLogin(String email, String password) throws SQLException,
           ClassNotFoundException {

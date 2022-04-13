@@ -1,4 +1,7 @@
-
+/** 
+ * @author mona_achaaoud 
+ * check if a session exists, remove the attribute user which is set in the login function, and forward the request to the login page. 
+ */
  
 import java.io.IOException;
  

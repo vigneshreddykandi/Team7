@@ -1,6 +1,12 @@
 package net.codejava;
 
+/** 
+ * @author mona_achaaoud 
+ * Class that represents a user which is the admin 
+ */
+
 import java.io.Serializable;
+
 
 public class User 
 implements Serializable {

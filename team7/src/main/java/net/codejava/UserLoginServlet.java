@@ -1,5 +1,10 @@
 package net.codejava;
- 
+/** 
+* @author mona_achaaoud 
+* doPost() method handles the request to login 
+* It calls the checkLogin() method of the UserDAO class to verify email and password against the database 
+* After login, it sets an attribute in the session to store information about the logged in user, and forwards the request to the admin dashboard 
+*/
 import java.io.*;
 import java.sql.SQLException;
  
