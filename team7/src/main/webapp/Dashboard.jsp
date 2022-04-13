@@ -1,49 +1,114 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title></title>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Election Machine</title>
+    <link rel="stylesheet" href="html/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    
+    <style>
+* {
+  box-sizing: border-box;
+}
 
-<header >
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 50%;
+  padding: 0 5px;
+}
+
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #444;
+  color: white;
+}
+.center {
+  margin: auto;
+  width: 60%;
+  
+  padding: 10px;
+}
+.center1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 10px;
+  
+}
+.fa {font-size:50px;}
+</style>
+    
+    
+
+
+    </head>
+    
+    
+      
+ <header >
 
 	<%@ include file="/html/dashboard_header.html" %>
 	
 </header>
-</head>
+
 <body>
-    <%-- <div style="text-align: center">
-=======
-   <%--  <div style="text-align: center">
->>>>>>> Stashed changes
-        <h1>Welcome to Admin Dashboard</h1>
-        <b>${user.fullname} (${user.email})</b>
-        <br><br>
-        <!-- <a href="/logout">Logout</a> -->
-    </div> --%>
-		
-    
-    <main>
-	  <div class="container">
-	  	<hr>
-	    <h1>Admin dashboard</h1>
-	    <hr>
-	   	<img src="http://cdn.onlinewebfonts.com/svg/img_325788.png" alt="admin icon" style="width:100px;height:100px;"><br>   
-	   	 <a href="./jsp/UpdateCandidate.jsp"><button class="button" type="button">View/Edit Candidates</button></a>
-	   	 <a href="#"><button class="button" type="button">Questions</button></a>
-	   	 
-<!-- 		<a href="../editallcandidates"><button class="button" type="button">Edit Candidates</button></a> -->
-<!-- 		<a href="../showcreatecandidate"><button class="button" type="button">New Candidate</button></a> -->
-<!-- 		<a href="../editallquestions"><button class="button" type="button">Edit Questions</button></a> -->
-		
-		
 
-	 </div>
-</main>
+
+
+<div class="center">
+
+<img src="https://static.thenounproject.com/png/58626-200.png" alt="Dashboard"  class="center1" >
+
+<div class="row" >
+  <div class="column">
+    <div class="card">
+      <p><i class="fa fa-user"></i></p>
+     <a href="/jsp/UpdateCandidate.jsp" > <h3 >   Candidate Section</h3> </a>
+      
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <p><i class="fa fa-check"></i></p>
+     <a href="/jsp/UpdateCandidate.jsp" > <h3 >   Questions section </h3> </a>
+      
+    </div>
+  </div>
+  </div>
+  
+  
+</div>
 </body>
-
-<footer>
+  <footer>
   
   	<%@ include file="/html/footer.html" %>
   

@@ -38,39 +38,76 @@ while(resultSet.next()){
 <body>
 <header>
 
-	<%@ include file="/html/userheader.html" %>
+	<%@ include file="/html/dashboard_header.html" %>
 
 
 </header>
-<h1>Update Candidate</h1>
+<body>
+
+
+
+
+<div class="container-fluid">
+
+<br>
+<h4> Add Candidate
+</h4>
+<br>
+
+<a href="/jsp/UpdateCandidate.jsp" >Go back</a>
+ <br>
+
 <form method="post" action="/jsp/update-process.jsp">
-<input type="hidden" name="ID" value="<%=resultSet.getString("ID") %>">
-<input type="text" name="ID" value="<%=resultSet.getString("ID") %>">
-<br>
+
+<div class="mb-3">
+ID:<br>
+<input type="text" name="ID" class="form-control" value="<%=resultSet.getString("ID") %>">
+  </div>
+
+<div class="mb-3">
 SURNAME:<br>
-<input type="text" name="SURNAME" value="<%=resultSet.getString("SURNAME") %>">
-<br>
+<input type="text" name="SURNAME" class="form-control" value="<%=resultSet.getString("SURNAME") %>">
+  </div>
+
+<div class="mb-3">
 FIRSTNAME:<br>
-<input type="text" name="FIRSTNAME" value="<%=resultSet.getString("FIRSTNAME") %>">
-<br>
+<input type="text" name="FIRSTNAME" class="form-control" value="<%=resultSet.getString("FIRSTNAME") %>">
+</div>
+<div class="mb-3">
+
 PARTY:<br>
-<input type="text" name="PARTY" value="<%=resultSet.getString("PARTY") %>">
-<br>
+<input type="text" name="PARTY" class="form-control" value="<%=resultSet.getString("PARTY") %>">
+</div>
+<div class="mb-3">
 LOCATION:<br>
-<input type="text" name="LOCATION" value="<%=resultSet.getString("LOCATION") %>">
+<input type="text" name="LOCATION" class="form-control" value="<%=resultSet.getString("LOCATION") %>">
+</div>
+<div class="mb-3">
 IKA:<br>
-<input type="text" name="IKA" value="<%=resultSet.getString("IKA") %>">
-<br>
+<input type="text" name="IKA" class="form-control" value="<%=resultSet.getString("IKA") %>">
+</div>
+<div class="mb-3">
+
 REASON:<br>
-<input type="text" name="WHY_COMMISSION" value="<%=resultSet.getString("WHY_COMMISSION") %>">
-<br>
+<input type="text" name="WHY_COMMISSION" class="form-control" value="<%=resultSet.getString("WHY_COMMISSION") %>">
+</div>
+<div class="mb-3">
 CHANGES:<br>
-<input type="text" name="WHAT_ATHES_WANT_EDES" value="<%=resultSet.getString("WHAT_ATHES_WANT_EDES") %>">
+<input type="text" name="WHAT_ATHES_WANT_EDES" class="form-control" value="<%=resultSet.getString("WHAT_ATHES_WANT_EDES") %>">
+</div>
+<div class="mb-3">
 PROFESSIONAL:<br>
-<input type="text" name="PROFESSIONAL" value="<%=resultSet.getString("PROFESSIONAL") %>">
+<input type="text" name="PROFESSIONAL" class="form-control" value="<%=resultSet.getString("PROFESSIONAL") %>">
+</div>
 <br><br>
-<input type="submit" value="submit">
+<input type="submit" value="submit"  class="btn btn-primary">
 </form>
+<div class="container-fluid">
+  
+</div>
+</div>
+
+
 <%
 }
 connection.close();
@@ -78,6 +115,8 @@ connection.close();
 e.printStackTrace();
 }
 %>
+
+</body>
 
  <footer>
   
