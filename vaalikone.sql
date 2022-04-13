@@ -31,13 +31,18 @@ DROP TABLE if exists CANDIDATEANSWERS;
 DROP TABLE if exists RESULT;
 DROP TABLE if exists STATISTICS;
 
-
+CREATE TABLE questions (
+   ID int  auto_increment,
+   Question VARCHAR(2500),
+   PRIMARY KEY (ID)
+);
 -- create User login
 CREATE TABLE users (
   email varchar(45) NOT NULL,
   password varchar(45) NOT NULL,
   fullname varchar(45) NOT NULL
 ) ENGINE=InnoDB;
+
 
 
 -- create a table ehdokkaat (mysql does not bother the case of letters - in this case)
@@ -56,7 +61,7 @@ CREATE TABLE EHDOKKAAT (
 
 -- create a table kysymykset
 CREATE TABLE KYSYMYKSET (
-   KYSYMYS_ID INTEGER NOT NULL,
+   KYSYMYS_ID INTEGER  auto_increment,
    KYSYMYS VARCHAR(100),
    PRIMARY KEY (KYSYMYS_ID)
 );
@@ -219,34 +224,26 @@ INSERT INTO EHDOKKAAT VALUES (18, "Anderson", "Otto", "Suomen ruotsalainen kansa
 INSERT INTO EHDOKKAAT VALUES (19, "Andersson ", "Cosmo", "Vasemmistoliitto", "Joensuu", 41, "Minusta saisi omistautuneet kansanedustajan jolla on vapauteen ja sosiaaliseen oikeudenmukaisuuteen pohjautuvat arvot, vahvat mielipiteet ja kykyä yhteistyähän.", "Olen uskonnoton yksilänvapauden kannattaja.  NATO myänteinen, ydinvoiman kannattaja.", "Kansanedustaja");
 INSERT INTO EHDOKKAAT VALUES (20, "Andersson", "Essi", "Suomen ruotsalainen kansanpuolue", "Kouvola", 63, "SUOMEN TALOUSNäKYMäT OVAT KATASTROFAALISIA  On tärkeä alkaa kohottamaan Suomen taloutta.   Sitä varten pitää saada päätäsvallan Suomeen  eroamalla EU:sta ja jostakin muista liitoista.", "Mnulla on fysiikan tohtorina vahva tieteellinen koulutus ja ohjelmistoyrittäjänä paljon kokemusta yhteiskunnasta, ml. julkishallinnosta. Näkemys ja kyky uudistuksiin on vahvuuteni.", "rakennusmestari");
 
-
--- create User values
-INSERT INTO users VALUES ('wafa@gmail.com','password','loyalfae' );
-INSERT INTO users VALUES ('nazanin@gmail.com','password','nazanin');
-INSERT INTO users VALUES ('vignesh@gmail.com','password','vignesh' );
-INSERT INTO users VALUES ('mona@gmail.com','password','mona' );
-
-
 -- insert values into the table kysymykset
-INSERT INTO KYSYMYKSET VALUES (1, "Suomessa on liian helppo elää sosiaaliturvan varassa");
-INSERT INTO KYSYMYKSET VALUES (2, "Kaupan ja muiden liikkeiden aukioloajat on vapautettava.");
-INSERT INTO KYSYMYKSET VALUES (3, "Suomessa on siirryttävä perustuloon joka korvaisi nykyisen sosiaaliturvan vähimmäistason.");
-INSERT INTO KYSYMYKSET VALUES (4, "Tyäntekijälle on turvattava lailla minimityäaika.");
-INSERT INTO KYSYMYKSET VALUES (5, "Ansiosidonnaisen tyättämyysturvan kestoa pitää lyhentää.");
-INSERT INTO KYSYMYKSET VALUES (6, "Euron ulkopuolella Suomi pärjäisi paremmin.");
-INSERT INTO KYSYMYKSET VALUES (7, "Ruoan verotusta on varaa kiristää.");
-INSERT INTO KYSYMYKSET VALUES (8, "Valtion ja kuntien taloutta on tasapainotettava ensisijaisesti leikkaamalla menoja.");
-INSERT INTO KYSYMYKSET VALUES (9, "Lapsilisiä on korotettava ja laitettava verolle.");
-INSERT INTO KYSYMYKSET VALUES (10, "Suomella ei ole varaa nykyisen laajuisiin sosiaali- ja terveyspalveluihin.");
-INSERT INTO KYSYMYKSET VALUES (11, "Nato-jäsenyys vahvistaisi Suomen turvallisuuspoliittista asemaa.");
-INSERT INTO KYSYMYKSET VALUES (12, "Suomeen tarvitaan enemmän poliiseja.");
-INSERT INTO KYSYMYKSET VALUES (13, "Maahanmuuttoa Suomeen on rajoitettava terrorismin uhan vuoksi.");
-INSERT INTO KYSYMYKSET VALUES (14, "Venäjän etupiiripolitiikka on uhka Suomelle.");
-INSERT INTO KYSYMYKSET VALUES (15, "Verkkovalvonnassa valtion turvallisuus on tärkeämpää kuin kansalaisten yksityisyyden suoja.");
-INSERT INTO KYSYMYKSET VALUES (16, "Suomen on osallistuttava Isisin vastaiseen taisteluun kouluttamalla Irakin hallituksen joukkoja.");
-INSERT INTO KYSYMYKSET VALUES (17, "Parantumattomasti sairaalla on oltava oikeus avustettuun kuolemaan.");
-INSERT INTO KYSYMYKSET VALUES (18, "Terveys- ja sosiaalipalvelut on tuotettava ensijaisesti julkisina palveluina.");
-INSERT INTO KYSYMYKSET VALUES (19, "Viranomaisten pitää puuttua lapsiperheiden ongelmiin nykyistä herkemmin.");
+INSERT INTO KYSYMYKSET  (KYSYMYS) VALUES ( "Suomessa on liian helppo elää sosiaaliturvan varassa");
+INSERT INTO KYSYMYKSET (KYSYMYS) VALUES ( "Kaupan ja muiden liikkeiden aukioloajat on vapautettava.");
+INSERT INTO KYSYMYKSET (KYSYMYS) VALUES ( "Suomessa on siirryttävä perustuloon joka korvaisi nykyisen sosiaaliturvan vähimmäistason.");
+INSERT INTO KYSYMYKSET (KYSYMYS) VALUES ( "Tyäntekijälle on turvattava lailla minimityäaika.");
+INSERT INTO KYSYMYKSET (KYSYMYS) VALUES ( "Ansiosidonnaisen tyättämyysturvan kestoa pitää lyhentää.");
+INSERT INTO KYSYMYKSET (KYSYMYS) VALUES ( "Euron ulkopuolella Suomi pärjäisi paremmin.");
+INSERT INTO KYSYMYKSET (KYSYMYS) VALUES ( "Ruoan verotusta on varaa kiristää.");
+INSERT INTO KYSYMYKSET (KYSYMYS)  VALUES ( "Valtion ja kuntien taloutta on tasapainotettava ensisijaisesti leikkaamalla menoja.");
+INSERT INTO KYSYMYKSET (KYSYMYS) VALUES ( "Lapsilisiä on korotettava ja laitettava verolle.");
+INSERT INTO KYSYMYKSET (KYSYMYS) VALUES ( "Suomella ei ole varaa nykyisen laajuisiin sosiaali- ja terveyspalveluihin.");
+INSERT INTO KYSYMYKSET (KYSYMYS) VALUES ( "Nato-jäsenyys vahvistaisi Suomen turvallisuuspoliittista asemaa.");
+INSERT INTO KYSYMYKSET (KYSYMYS) VALUES ( "Suomeen tarvitaan enemmän poliiseja.");
+INSERT INTO KYSYMYKSET (KYSYMYS) VALUES ( "Maahanmuuttoa Suomeen on rajoitettava terrorismin uhan vuoksi.");
+INSERT INTO KYSYMYKSET  (KYSYMYS) VALUES ( "Venäjän etupiiripolitiikka on uhka Suomelle.");
+INSERT INTO KYSYMYKSET (KYSYMYS) VALUES ( "Verkkovalvonnassa valtion turvallisuus on tärkeämpää kuin kansalaisten yksityisyyden suoja.");
+INSERT INTO KYSYMYKSET (KYSYMYS) VALUES ( "Suomen on osallistuttava Isisin vastaiseen taisteluun kouluttamalla Irakin hallituksen joukkoja.");
+INSERT INTO KYSYMYKSET (KYSYMYS) VALUES ( "Parantumattomasti sairaalla on oltava oikeus avustettuun kuolemaan.");
+INSERT INTO KYSYMYKSET (KYSYMYS) VALUES ( "Terveys- ja sosiaalipalvelut on tuotettava ensijaisesti julkisina palveluina.");
+INSERT INTO KYSYMYKSET (KYSYMYS) VALUES ( "Viranomaisten pitää puuttua lapsiperheiden ongelmiin nykyistä herkemmin.");
 
 -- insert values into the table vastaukset
 INSERT INTO VASTAUKSET VALUES  (1, 1, 2, "ehdokkaan 1 vastaus kysymykseen 1");
@@ -272,3 +269,9 @@ INSERT INTO VASTAUKSET VALUES  (2, 1, 3, "ehdokkaan 2 vastaus kysymykseen 1");
 
 
 
+
+-- create User values
+INSERT INTO users VALUES ('wafa@gmail.com','password','loyalfae' );
+INSERT INTO users VALUES ('nazanin@gmail.com','password','nazanin');
+INSERT INTO users VALUES ('vignesh@gmail.com','password','vignesh' );
+INSERT INTO users VALUES ('mona@gmail.com','password','mona' );
