@@ -1,4 +1,11 @@
 package questionss;
+/**
+ * @author vigneshkandi, wafa faquir, nazanin fallah
+ * 
+ * 
+ * this is a dao file of questions
+ *
+ */
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,6 +16,7 @@ import java.util.ArrayList;
 
 
 import questionss.Questionss;
+
 
 public class QuestionssDao {
 	

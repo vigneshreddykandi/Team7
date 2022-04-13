@@ -31,7 +31,7 @@ body  {
   <div class="card-body">
     <h5 class="card-title"> Answer quiz</h5>
     <p class="card-text"> to find suitable candidate matches your answers.</p>
-    <a href="./jsp/showquestion.jsp" class="btn btn-primary">Go to quiz</a>
+    <a href="./jsp/comingsoon.jsp" class="btn btn-primary">Go to quiz</a>
   </div>
 </div>
     </div>

@@ -99,7 +99,7 @@ body {
   <div class="column">
     <div class="card">
       <p><i class="fa fa-check"></i></p>
-     <a href="/jsp/UpdateCandidate.jsp" > <h3 >   Questions section </h3> </a>
+     <a href="/jsp/UpdateQuestion.jsp" > <h3 >   Questions section </h3> </a>
       
     </div>
   </div>

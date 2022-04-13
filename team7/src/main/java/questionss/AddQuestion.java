@@ -1,5 +1,13 @@
 package questionss;
 
+/**
+ * @author vigneshkandi,wafa faquir,nazanin fallah
+ *From here we can add question  using servlet technology
+ *
+ * Questionss question=readQuestion(request); -it reads paramenters
+ *  dao.saveQuestion(question); - // Save value and query total list
+ */
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -11,11 +19,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import questionss.questionDao;
-
 /**
  * Servlet implementation class AddQuestion
  */
+
+
 @WebServlet("/AddQuestion")
 public class AddQuestion extends HttpServlet {
  private static final long serialVersionUID = 1L;
@@ -50,7 +58,7 @@ public class AddQuestion extends HttpServlet {
   
   
   
-  response.sendRedirect("/index.jsp");
+  response.sendRedirect("/jsp/UpdateQuestion.jsp");
  }
 
 
