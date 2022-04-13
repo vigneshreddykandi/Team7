@@ -80,36 +80,7 @@ e.printStackTrace();
 }
 %>
 </table> 
-=======
-<main>
-<div class="form-container2">
-<h1>Candidates</h1>
-<div class="row">
-<c:forEach var="candidate" items="${requestScope.candidatelist}">
-<div class="col-sm-4">
-    <div id="project1" class="project_cards">
-       <div class="card_photo">
-       </div>
-       <div class="card-header">
-           <h4>${candidate.firstname} - ${candidate.surname}</h4>
-       </div>
-       <div class="card-describe">
-       	<p class="card-text"><b>Candidate id:</b> ${candidate.id}</p>	    
-	   	<p class="card-text"><b>Candidate Party:</b> ${candidate.party}</p>	    
-	    <p class="card-text"><b>Candidate Location:</b> ${candidate.location}</p>    
-	    <p class="card-text"><b>Candidate profession:</b> ${candidate.professional}</p>
-	    <a href='../showonecandidate?id=${candidate.id}' class="btn btn-primary">More Information</a>
-	    
-       </div>
-   </div>
-</div>	
-	<!--  <a href='../deletecandidate?id=${candidate.id}'><button class="submit-button">Delete</button></a> 
-	<a href='../readtoupdatecandidate?id=${candidate.id}'><button class="submit-button">Update</button></a>-->
-</c:forEach>
-</div>
 
-</div>
-</main>
 </body>
 
 <footer>
