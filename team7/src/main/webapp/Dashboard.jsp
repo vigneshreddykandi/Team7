@@ -76,7 +76,7 @@ body {
  <header >
 
 	<%@ include file="/html/dashboard_header.html" %>
-
+	
 </header>
 
 <body>
